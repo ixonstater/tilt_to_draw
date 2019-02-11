@@ -1,0 +1,6 @@
+Screens:
+  1) Welcome screen
+  2) Drawing creation widget
+  3) Options screen
+    1) Color picker widget
+  4) About screen
