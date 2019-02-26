@@ -1,19 +1,16 @@
 import React, {Component} from 'react'
 import {View, StyleSheet, Text} from 'react-native'
-import {NativeModules} from 'react-native'
+import {NativeDrawing} from '../extras/native_drawing'
+import {NativeButton} from '../extras/native_drawing'
 
 export default class DrawingScreen extends Component <Props>{
   constructor(props){
     super(props)
-    nativeDrawing.test(4, 2, this.adder)
-  }
-  adder(num1, num2){
-    console.log(num1 + num2)
   }
   render(){
     return(
       <View style = {styles.bg}>
-
+        <NativeButton></NativeButton>
       </View>
     )
   }
@@ -26,5 +23,3 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
   }
 })
-
-const nativeDrawing = NativeModules.RNNativeDrawing

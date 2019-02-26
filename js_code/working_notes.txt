@@ -4,3 +4,9 @@ Screens:
   3) Options screen
     1) Color picker widget
   4) About screen
+
+Drawing Screen API:
+  -Necessary Functions
+    1) createCanvas()
+    2) saveImg()
+    3) drawToCanvas()
