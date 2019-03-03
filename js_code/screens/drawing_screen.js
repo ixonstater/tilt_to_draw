@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {View, StyleSheet, Text} from 'react-native'
+import {NativeImage} from '../extras/native_drawing'
 
 
 export default class DrawingScreen extends Component{
@@ -9,6 +10,7 @@ export default class DrawingScreen extends Component{
   render(){
     return(
       <View style = {styles.bg}>
+        <NativeImage width = {10} height = {50} bgcolor = {20}></NativeImage>
       </View>
     )
   }
