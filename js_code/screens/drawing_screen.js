@@ -1,16 +1,14 @@
 import React, {Component} from 'react'
 import {View, StyleSheet, Text} from 'react-native'
-import {NativeDrawing} from '../extras/native_drawing'
-import {NativeButton} from '../extras/native_drawing'
 
-export default class DrawingScreen extends Component <Props>{
+
+export default class DrawingScreen extends Component{
   constructor(props){
     super(props)
   }
   render(){
     return(
       <View style = {styles.bg}>
-        <NativeButton></NativeButton>
       </View>
     )
   }
