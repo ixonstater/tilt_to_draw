@@ -10,12 +10,11 @@ export default class DrawingScreen extends Component{
   render(){
     return(
       <View style = {styles.bg}>
-        <NativeImage width = {10} height = {50} bgcolor = {20}></NativeImage>
+        <NativeImage width = {'100%'} height = {'100%'} bgcolor = {20}></NativeImage>
       </View>
     )
   }
 }
-
 const styles = StyleSheet.create({
   bg: {
     height: '100%',

@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Tilt-ta-Draw</string>
+	<string name="app_name">Tilt-ta-Draw</string>
+	<string name="canvas_screen_size_full">full</string>
 </resources>
