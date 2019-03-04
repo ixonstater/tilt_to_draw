@@ -15,7 +15,7 @@ export default class DrawingScreen extends Component{
         <NativeImage
           width = {'100%'}
           height = {'100%'}
-          bgcolor = {[100,100,100]}
+          bgcolor = {[0,0,0]}
           triggerDrawTest = {[29,30]}>
         </NativeImage>
       </View>
