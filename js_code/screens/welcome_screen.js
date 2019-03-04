@@ -5,7 +5,7 @@ import BasicButton from '../components/basic_button'
 import appConsts from '../extras/consts'
 import checkOrientation from '../extras/orientation'
 
-export default class WelcomeScreen extends Component <Props> {
+export default class WelcomeScreen extends Component {
   constructor (props){
     super(props)
     this.currentOrientation = checkOrientation()

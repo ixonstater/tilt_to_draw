@@ -7,7 +7,17 @@ import {NativeImage} from '../extras/native_drawing'
 export default class DrawingScreen extends Component{
   constructor(props){
     super(props)
-    
+    this.state = {coords: [0,0]}
+    setInterval(() => (
+      this.setState(function(previousState){
+        console.log("running in the loop")
+        if(previousState.coords[0] == 0){
+          return {coords: [500,500]}
+        }else{
+          return {coords: [0,0]}
+        }
+      })
+    ), 1000)
   }
   render(){
     return(
@@ -15,8 +25,8 @@ export default class DrawingScreen extends Component{
         <NativeImage
           width = {'100%'}
           height = {'100%'}
-          bgcolor = {[0,0,0]}
-          triggerDrawTest = {[29,30]}>
+          bgcolor = {[200,200,200]}
+          triggerdraw = {this.state.coords}>
         </NativeImage>
       </View>
     )
