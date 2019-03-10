@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {View, StyleSheet, Text} from 'react-native'
-import {NativeTablet} from '../extras/native_drawing'
+import {NativeTablet, NativeDrawing} from '../extras/native_drawing'
 
 
 
@@ -13,11 +13,22 @@ export default class DrawingScreen extends Component{
       <View style = {styles.wrapper}>
         <NativeTablet
           width = {'100%'}
-          height = {'100%'}
-          triggerdraw = {[0, 0, 17]}>
+          height = {'100%'}>
         </NativeTablet>
       </View>
     )
+  }
+  componentDidMount(){
+    let x = 0
+    let y = 0
+    this.interval = setInterval(function(){
+      x += 10
+      y += 10
+      NativeDrawing.triggerDraw([x,y])
+    }, 17)
+  }
+  componentWillUnmount(){
+    clearInterval(this.interval)
   }
 }
 const styles = StyleSheet.create({
