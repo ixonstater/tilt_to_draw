@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
 import {View, StyleSheet, Text} from 'react-native'
 import {NativeTablet, NativeDrawing} from '../extras/native_drawing'
-
+import { accelerometer, setUpdateIntervalForType, stop, start} from 'react-native-sensors'
 
 
 export default class DrawingScreen extends Component{
   constructor(props){
     super(props)
+    
   }
   render(){
     return(
@@ -19,16 +20,12 @@ export default class DrawingScreen extends Component{
     )
   }
   componentDidMount(){
-    let x = 0
-    let y = 0
-    this.interval = setInterval(function(){
-      x += 10
-      y += 10
-      NativeDrawing.triggerDraw([x,y])
-    }, 17)
+    setUpdateIntervalForType('accelerometer', 100)
+    start('accelerometer')
+    accelerometer.subscribe(({x,y,z}) => console.log({x,y,z}))
   }
   componentWillUnmount(){
-    clearInterval(this.interval)
+    stop('accelerometer')
   }
 }
 const styles = StyleSheet.create({

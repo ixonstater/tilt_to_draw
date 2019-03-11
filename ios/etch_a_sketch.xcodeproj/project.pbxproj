@@ -46,6 +46,7 @@
 		D04359B526E44B7FAD379D1E /* sp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CDFFE57DE544B28AD21E0B6 /* sp.ttf */; };
 		D80D7FD206FB4CF0BD04DC7C /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E16AC52597DC455883D33813 /* libRNGestureHandler.a */; };
 		EE92EE90B473441D915FD2C9 /* libRNNativeDrawing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC491E05F0C348BEA865AC06 /* libRNNativeDrawing.a */; };
+		21C6BABBE29945128ADA3F6B /* libRNSensors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF35022AF634A7E9B7F09F9 /* libRNSensors.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -362,6 +363,8 @@
 		E16AC52597DC455883D33813 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		2EA365D048084A8C9433CD01 /* RNNativeDrawing.xcodeproj */ = {isa = PBXFileReference; name = "RNNativeDrawing.xcodeproj"; path = "../node_modules/react-native-native-drawing/ios/RNNativeDrawing.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		DC491E05F0C348BEA865AC06 /* libRNNativeDrawing.a */ = {isa = PBXFileReference; name = "libRNNativeDrawing.a"; path = "libRNNativeDrawing.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		0016FE492F42433BBD5FA8CE /* RNSensors.xcodeproj */ = {isa = PBXFileReference; name = "RNSensors.xcodeproj"; path = "../node_modules/react-native-sensors/ios/RNSensors.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		ABF35022AF634A7E9B7F09F9 /* libRNSensors.a */ = {isa = PBXFileReference; name = "libRNSensors.a"; path = "libRNSensors.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +395,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				D80D7FD206FB4CF0BD04DC7C /* libRNGestureHandler.a in Frameworks */,
 				EE92EE90B473441D915FD2C9 /* libRNNativeDrawing.a in Frameworks */,
+				21C6BABBE29945128ADA3F6B /* libRNSensors.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +587,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				C5204119742A4FA799F98F01 /* RNGestureHandler.xcodeproj */,
 				2EA365D048084A8C9433CD01 /* RNNativeDrawing.xcodeproj */,
+				0016FE492F42433BBD5FA8CE /* RNSensors.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1231,11 +1236,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-native-drawing/ios",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 				);
 			};
 			name = Debug;
@@ -1259,11 +1266,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-native-drawing/ios",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 				);
 			};
 			name = Release;
@@ -1288,6 +1297,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-native-drawing/ios",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 				);
 			};
 			name = Debug;
@@ -1311,6 +1321,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-native-drawing/ios",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 				);
 			};
 			name = Release;
@@ -1342,11 +1353,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-native-drawing/ios",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 				);
 			};
 			name = Debug;
@@ -1378,11 +1391,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-native-drawing/ios",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 				);
 			};
 			name = Release;
@@ -1413,11 +1428,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-native-drawing/ios",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 				);
 			};
 			name = Debug;
@@ -1448,11 +1465,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-native-drawing/ios",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 				);
 			};
 			name = Release;

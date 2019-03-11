@@ -1,4 +1,6 @@
 rootProject.name = 'etch_a_sketch'
+include ':react-native-sensors'
+project(':react-native-sensors').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sensors/android')
 include ':react-native-native-drawing'
 project(':react-native-native-drawing').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-native-drawing/android')
 include ':react-native-gesture-handler'
