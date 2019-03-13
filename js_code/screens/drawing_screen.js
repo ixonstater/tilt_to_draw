@@ -22,10 +22,19 @@ export default class DrawingScreen extends Component{
   componentDidMount(){
     setUpdateIntervalForType('accelerometer', 100)
     start('accelerometer')
-    accelerometer.subscribe(({x,y,z}) => console.log({x,y,z}))
+    // accelerometer.subscribe(({x,y,z}) => console.log({x,y,z}))
+    NativeDrawing.startDraw()
+    let x = 0
+    let y = 0
+    this.drawThread = setInterval(function(){
+      NativeDrawing.sendCoords([x,y])
+      x += 10
+      y += 10
+    }, 22)
   }
   componentWillUnmount(){
     stop('accelerometer')
+    clearInterval(this.drawThread)
   }
 }
 const styles = StyleSheet.create({
