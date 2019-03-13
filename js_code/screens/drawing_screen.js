@@ -23,9 +23,17 @@ export default class DrawingScreen extends Component{
     setUpdateIntervalForType('accelerometer', 100)
     start('accelerometer')
     accelerometer.subscribe(({x,y,z}) => console.log({x,y,z}))
+    let x = 0
+    let y = 0
+    this.drawInterval = setInterval(function(){
+      NativeDrawing.triggerDraw([x,y])
+      x += 10
+      y += 10
+    }, 17)
   }
   componentWillUnmount(){
     stop('accelerometer')
+    clearInterval(this.drawInterval)
   }
 }
 const styles = StyleSheet.create({
