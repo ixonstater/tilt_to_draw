@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {Dimensions, View} from 'react-native'
 import WelcomeScreen from './screens/welcome_screen'
 import OptionsScreen from './screens/options_screen'
 import AboutScreen from './screens/about_screen'

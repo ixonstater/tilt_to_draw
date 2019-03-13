@@ -1,12 +1,14 @@
 
 export default class MotionTracker{
-    constructor(){
+    constructor(midX, midY){
         this.x = 50
         this.y = 50
+        this.xOffset = midX / 50
+        this.yOffset = midY / 50
         this.xVel = 0
         this.yVel = 0
     }
-    iterate(forceX, forceY){
-        
+    update(forceX, forceY){
+        this.x = 
     }
 }
