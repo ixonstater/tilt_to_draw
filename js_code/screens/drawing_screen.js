@@ -4,7 +4,7 @@ import {NativeTablet, NativeDrawing} from '../extras/native_drawing'
 import MotionTracker from '../extras/position_calculation'
 import { accelerometer, setUpdateIntervalForType, stop, start} from 'react-native-sensors'
 
-const REFRESHRATE = 500
+const REFRESHRATE = 70
 const ACCELDATAREFRESHRATE = 100
 
 export default class DrawingScreen extends Component{
@@ -48,7 +48,7 @@ export default class DrawingScreen extends Component{
     NativeDrawing.sendStartingCoords([midX, midY])
     this.drawInterval = setInterval(function(){
       let[x,y] = motionTracker.update(this.accelerometerData)
-      // NativeDrawing.triggerDraw([x,y])
+      NativeDrawing.triggerDraw([x,y])
     }.bind(this), REFRESHRATE)
   }
   // testDrawing(){

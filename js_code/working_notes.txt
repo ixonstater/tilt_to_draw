@@ -10,3 +10,8 @@ Drawing Screen API:
     1) createCanvas()
     2) saveImg()
     3) drawToCanvas()
+
+ToDo:
+	1) Investigate android Path to store points
+	2) Find way around while(x == null){ } loop
+	3)
