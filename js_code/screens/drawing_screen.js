@@ -42,8 +42,16 @@ export default class DrawingScreen extends Component{
   }
   startDraw(){
     let {height,width} = Dimensions.get('window')
-    let midX = width
-    let midY = height
+    let midX = 0
+    let midY = 0
+    if(width > height){
+      midY = width
+      midX = height
+    } else {
+      midY = height
+      midX = width
+    }
+    
     let motionTracker = new MotionTracker(midX,midY)
     NativeDrawing.sendStartingCoords([midX, midY])
     this.drawInterval = setInterval(function(){
