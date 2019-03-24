@@ -21,7 +21,11 @@ export default class DrawingScreen extends Component{
       <View style = {styles.wrapper}>
         <NativeTablet
           width = {'100%'}
-          height = {'100%'}>
+          height = {'100%'}
+          CircleColor = {'#AAFF22'}
+          LineColor = {'#FFAA22'}
+          BackgroundColor = {'#99112D'}
+          CircleRadius = {20}>
         </NativeTablet>
       </View>
     )
@@ -39,6 +43,7 @@ export default class DrawingScreen extends Component{
   setAccelerometerData(data){
     this.accelerometerData.x = data.x
     this.accelerometerData.y = data.y
+    this.accelerometerData.z = data.z
   }
   startDraw(){
     let {height,width} = Dimensions.get('window')
@@ -53,25 +58,12 @@ export default class DrawingScreen extends Component{
     }
     
     let motionTracker = new MotionTracker(midX,midY)
-    NativeDrawing.sendStartingCoords([midX, midY])
+    NativeDrawing.prepareTablet()
     this.drawInterval = setInterval(function(){
       let[x,y] = motionTracker.update(this.accelerometerData)
       NativeDrawing.triggerDraw([x,y])
     }.bind(this), REFRESHRATE)
   }
-  // testDrawing(){
-  //   let {height,width} = Dimensions.get('window')
-  //   let midX = width
-  //   let midY = height
-  //   let x = midX
-  //   let y = midY
-  //   NativeDrawing.sendStartingCoords([midX, midY])
-  //   this.drawInterval = setInterval(function(){
-  //     x += x * 0.1
-  //     y += y * -0.1
-  //     NativeDrawing.triggerDraw([x,y])
-  //   }.bind(this), REFRESHRATE)
-  // }
 }
 
 const styles = StyleSheet.create({

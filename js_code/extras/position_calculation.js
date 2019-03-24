@@ -1,23 +1,20 @@
 
 export default class MotionTracker{
-    constructor(midX, midY){
+    constructor(){
         this.xCoord = 50
         this.yCoord = 50
-        this.xOffset = midX / 50
-        this.yOffset = midY / 50
         this.xVel = 0
         this.yVel = 0
-        this.friction = 1.2
-        this.maxXVel = 1.5
+        this.friction = 1
+        this.maxXVel = 2.5
         this.maxYVel = 1.5
     }
     update(data){
         let {x, y} = data
         let [xForce, yForce] = this.applyFriction(x,y)
-        console.log(xForce,yForce)
         this.calcVelocity(xForce, yForce)
         this.generateCoords()
-        return ([this.xOffset * this.xCoord, this.yOffset * this.yCoord])
+        return ([this.xCoord, this.yCoord])
     }
 
     applyFriction(x,y){

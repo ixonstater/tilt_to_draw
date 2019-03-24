@@ -12,6 +12,8 @@ Drawing Screen API:
     3) drawToCanvas()
 
 ToDo:
-	1) Investigate android Path to store points
 	2) Find way around while(x == null){ } loop
-	3)
+	3) Merge path to bitmap on bg thread every 10000(?) points added
+  4) Export screen dimension getting to native code
+  5) Add @ReactProp for circle radius (will control line width)
+  6) Add optimization: if coords are identical to previous do not draw to screen
