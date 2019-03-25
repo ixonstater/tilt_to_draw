@@ -12,8 +12,19 @@ Drawing Screen API:
     3) drawToCanvas()
 
 ToDo:
-	2) Find way around while(x == null){ } loop
+	2) Find way around while(x == null){ getx(); } loop
 	3) Merge path to bitmap on bg thread every 10000(?) points added
-  4) Export screen dimension getting to native code
-  5) Add @ReactProp for circle radius (will control line width)
-  6) Add optimization: if coords are identical to previous do not draw to screen
+  4) Add touch recognition and requisite methods to allow moving the circle w/o drawing to screen
+  5) Create simple tutorial 
+    -After 5 seconds of no recognized touch fade in the "touch and hold to draw" message
+    -Persist message for 2 seconds then disappear
+  6) Create color selection screen
+  6.5) Create circle size selection screen
+    -three or four selectable sizes
+  7) Create buttons for options screen
+  8) Investigate react-native-orientation
+
+
+  Issue number 3
+    -Cannot easily convert android.graphics.Path to bitmap
+    -Can place the bitmap in a canvas and then draw the path to the bitmap
